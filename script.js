@@ -6,7 +6,8 @@ async function searchAndPlay() {
   }
 
   try {
-    const response = await fetch(`https://corsproxy.io/?https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`);
+    const searchURL = `https://corsproxy.io/?https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+    const response = await fetch(searchURL);
     const html = await response.text();
     const videoIdMatch = html.match(/"videoId":"(.*?)"/);
 
@@ -18,8 +19,8 @@ async function searchAndPlay() {
     } else {
       alert("No video found.");
     }
-  } catch (err) {
-    console.error("Error fetching YouTube data:", err);
-    alert("Unable to load video. Try again later.");
+  } catch (error) {
+    alert("Error fetching video. Please try again later.");
+    console.error(error);
   }
 }
